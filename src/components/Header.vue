@@ -3,12 +3,19 @@
 		<div id="header-text">
 			<h1>Knowledge base doesn't have to be boring</h1>
 			<h3>Everything you need to manage your messaging</h3>
+
+			<Search />
 		</div>
 	</div>
 </template>
 
 <script>
+import Search from '../components/Search.vue'
+
 export default {
+	components: {
+		Search
+	}
 }
 </script>
 
@@ -20,7 +27,7 @@ export default {
 		font-family: $font-family;
 		color: $text-black;
 		padding: 20px;
-
+		background: #ffffff;
 		h1{
 			font-style: normal;
 			font-weight: bold;

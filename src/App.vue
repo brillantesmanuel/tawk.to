@@ -1,6 +1,8 @@
 <template>
 	<div>
 		<tawk-header></tawk-header>
+		
+		<router-view></router-view>
 	</div>
 </template>
 
@@ -15,5 +17,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	@import 'scss/main.scss';
+	@import './scss/main.scss';
 </style>
