@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import Hello from './pages/default.vue'
 import Category from './pages/category.vue'
+import SearchPage from './pages/search_result.vue'
 
 Vue.use(VueRouter)
 
@@ -25,6 +26,11 @@ export default new VueRouter({
             path: '/category/:catID',
             name: 'Category',
             component: Category
+        },
+        {
+            path: '/search/:slug',
+            name: 'Search',
+            component: SearchPage
         }
     ]
 }); 

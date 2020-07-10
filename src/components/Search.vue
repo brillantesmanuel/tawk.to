@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="searchSubmit">
+    <form @submit="searchSubmit">
         <input type="search" 
                 v-model="search"
                 placeholder="Search for answers">
@@ -10,10 +10,19 @@
 </template>
 
 <script>
+const axios = require('axios')
+
 export default {
     data () {
         return {
             search: ''
+        }
+    },
+    methods: {
+        searchSubmit () {
+            this.$router.push(`/search/${ this.search }`)
+
+            window.location.reload()
         }
     }
 }
